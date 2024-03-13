@@ -11,7 +11,7 @@ const Navbar = () => {
                     <Typography variant='danger'>Aaniya</Typography>
                 </Box>
                 <Box>
-                    <Typography variant='danger'>Aaniya</Typography>
+                    <Typography variant='danger'  >Logout</Typography>
                 </Box>
             </Toolbar>
         </AppBar>

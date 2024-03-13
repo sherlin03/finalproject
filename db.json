@@ -1,0 +1,40 @@
+{
+  "adminuser": [
+    {
+      "id": "Michael Sherlin",
+      "email": "michaelsherlin@gmail.com",
+      "mobile": "9585471103",
+      "address": "Rajavoor",
+      "country": "",
+      "gender": "Male",
+      "password": "123456"
+    },
+    {
+      "id": "Jovi",
+      "email": "admin@gmail.com",
+      "mobile": "1234567890",
+      "address": "Nagercoil",
+      "country": "",
+      "gender": "Female",
+      "password": "jovi"
+    },
+    {
+      "id": "Kaipulla",
+      "email": "kaipulla@gmail.com",
+      "mobile": "1234567890",
+      "address": "Varuthapadatha valipar sangam",
+      "country": "India",
+      "gender": "Male",
+      "password": "123456"
+    },
+    {
+      "id": "sdffsd",
+      "email": "sdfsa@dsf.sdf",
+      "mobile": "123132",
+      "address": "sdfsdaf",
+      "country": "USA",
+      "gender": "Female",
+      "password": "asfdsdf"
+    }
+  ]
+}

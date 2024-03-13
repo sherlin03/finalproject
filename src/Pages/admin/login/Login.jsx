@@ -10,7 +10,7 @@ const Login = () => {
       <Container>
       
       <div  className="text-center ">
-      <h1 style={{marginTop:"100px",opacity:"0.9"}}><b>Aaniya</b></h1>  
+      <h1 style={{marginTop:"100px",opacity:"0.9"}}><b>Aaniya</b> </h1>  
       <Card className="text-center"  style={{marginLeft:"300px",width:"500px"}}>
         <Form>
       <Card.Body>
@@ -26,7 +26,7 @@ const Login = () => {
         <Button variant="primary">Login</Button>
         <p style={{paddingTop:"10px"}}>-OR-</p>
         <p class="mb-1" style={{color:"blue"}}>
-        I forgot my password
+        I forgot my password 
       </p>
         <p class="mb-1" style={{color:"blue"}}>
         Register a new membership
