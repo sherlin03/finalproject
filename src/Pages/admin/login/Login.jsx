@@ -3,6 +3,7 @@ import '../../../App.css'
 import { Container, Form, FormControl } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -26,10 +27,10 @@ const Login = () => {
         <Button variant="primary">Login</Button>
         <p style={{paddingTop:"10px"}}>-OR-</p>
         <p class="mb-1" style={{color:"blue"}}>
-        I forgot my password 
+         Forgot Password 
       </p>
         <p class="mb-1" style={{color:"blue"}}>
-        Register a new membership
+        <Link to="/register" style={{textDecoration:"none"}}> Register </Link>
       </p>
       </Card.Body>
       </Form>

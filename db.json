@@ -35,6 +35,15 @@
       "country": "USA",
       "gender": "Female",
       "password": "asfdsdf"
+    },
+    {
+      "id": "Michael Sherlin",
+      "email": "admin@gmail.com",
+      "mobile": "9585471103",
+      "address": "Rajavoor",
+      "country": "India",
+      "gender": "Male",
+      "password": "sherlin"
     }
   ]
 }

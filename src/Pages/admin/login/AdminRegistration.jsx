@@ -14,6 +14,12 @@ const AdminRegistration = () => {
 
     const navigate =useNavigate()
 
+    const IsValidate =()=>{
+        let isprocessed=true;
+        return isprocessed;
+    }
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         let regobj={id,email,mobile,address,country,gender,password};
