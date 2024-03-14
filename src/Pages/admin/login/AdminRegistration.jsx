@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../../../App.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 const AdminRegistration = () => {
 
@@ -14,16 +14,53 @@ const AdminRegistration = () => {
 
     const navigate =useNavigate()
 
+    let errormessage='Enter the Valid';
+
+
     const IsValidate =()=>{
-        let isprocessed=true;
-        return isprocessed;
+        let isproceed=true;
+        if(id===null || id===''){
+            isproceed=false;
+            errormessage += ' User Name';
+        }
+        if(email===null || email===''){
+            isproceed=false;
+            errormessage += ' Email'
+        }
+        if(mobile===null || mobile===''){
+            isproceed=false;
+            errormessage += ' Mobile'
+        }
+        if(address===null || address===''){
+            isproceed=false;
+            errormessage += ' Address'
+        }
+        if(gender===null || gender===''){
+            isproceed=false;
+            errormessage += ' Gender'
+        }
+        if (password===null || password===''){
+            isproceed=false;
+            errormessage += ' Password'
+        }
+
+        if(!isproceed){
+            toast.warning(errormessage) ;
+         }
+        return isproceed;
     }
+
+   
 
 
     const handleSubmit = (e) => {
+       
         e.preventDefault();
+
         let regobj={id,email,mobile,address,country,gender,password};
          console.log(regobj)
+
+         if (IsValidate()){
 
       fetch("http://localhost:4000/adminuser",{
          method:"POST",
@@ -37,6 +74,7 @@ const AdminRegistration = () => {
       }).catch((err)=>{
         toast.error("Field:"+err.message)
       })
+    }
 
     }
 
@@ -92,6 +130,8 @@ const AdminRegistration = () => {
                 </div>
                 <div className='card-footer'>
                 <button type="submit" className="btn btn-success"> Register</button>
+                <button type="submit" className="btn btn-primary"> <Link to='/'>Close</Link></button>
+
                 </div>
                
             </div>
