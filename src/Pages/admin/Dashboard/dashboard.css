@@ -48,3 +48,10 @@
   .coustom :hover {
     background-color:black;
   }
+  .coustom ul li Link:hover {
+    background-color: #555;
+  }
+  .sidebar ul li ul li Link:hover {
+    background-color: #555;
+    text-decoration: none;
+  }

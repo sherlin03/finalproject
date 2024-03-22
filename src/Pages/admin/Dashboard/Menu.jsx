@@ -1,5 +1,6 @@
-import { Box} from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './dashboard.css'
 
 
@@ -14,7 +15,14 @@ const Menu = () => {
           <img src={require('../../../Img/user.png')} alt="User" style={{height:"40px",backgroundColor:"white",marginLeft:"180px",marginBottom:"5px"}}/>
         </div>
       <ul style={{paddingTop:"10px"}}>
-        <li>Dashboard</li>
+      <li className='coustom' style={{backgroundColor:"black"}}>Products
+          <ul>
+            <li><Link to='/tshirts' style={{textDecoration:"none",color:"white"}}>T-Shirts</Link></li>
+            <li><Link to='/jean' style={{textDecoration:"none",color:"white"}}>Jean</Link></li>
+            <li><Link to='/suits' style={{textDecoration:"none",color:"white"}}>Men's Suits</Link></li>
+            <li><Link to='/shoes' style={{textDecoration:"none",color:"white"}}>Men's Shoes</Link></li>
+          </ul>
+        </li>
         <li>Analytics</li>
         <li className='coustom' style={{backgroundColor:"black"}}>Settings
           <ul>
