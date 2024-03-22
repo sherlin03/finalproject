@@ -28,13 +28,40 @@
       "password": "123456"
     },
     {
-      "id": "Michael Sherlin",
+      "id": "MichaelSherlin",
       "email": "admin@gmail.com",
       "mobile": "9585471103",
       "address": "Rajavoor",
       "country": "India",
       "gender": "Male",
       "password": "sherlin"
+    },
+    {
+      "id": "santhiya",
+      "email": "santhiya@gmail.com",
+      "mobile": "86423214557",
+      "address": "nagercoil",
+      "country": "India",
+      "gender": "Female",
+      "password": "1234"
+    },
+    {
+      "id": "dzfd",
+      "email": "michaelsherlin03@gmail.com",
+      "mobile": "SDAS",
+      "address": "qweqw",
+      "country": "India",
+      "gender": "Male",
+      "password": "QADS"
+    },
+    {
+      "id": "sherlin",
+      "email": "michaelsherlin03@gmail.com",
+      "mobile": "1234567890",
+      "address": "qweqw",
+      "country": "India",
+      "gender": "Male",
+      "password": "12345"
     }
   ]
 }

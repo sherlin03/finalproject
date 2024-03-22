@@ -1,9 +1,9 @@
+import { Stack } from '@mui/material'
 import React from 'react'
-import Navbar from './Navbar'
-import Menu from './Menu'
-import Content from './Content'
-import { Container, Stack } from '@mui/material'
 import '../../../App.css'
+import Content2 from './Content2'
+import Menu from './Menu'
+import Navbar from './Navbar'
 
 const Layout = () => {
   return (
@@ -12,9 +12,8 @@ const Layout = () => {
         
              <Stack direction="row" spacing={3} justifyContent="space-between" >
             <Menu/>
-            <Content/>
+            <Content2/>
             </Stack>
-       
     </div>
   )
 }

@@ -1,72 +1,104 @@
-import React, { useState } from 'react'
-import '../../../App.css'
-import { Container, Form, FormControl } from 'react-bootstrap'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import '../../../App.css';
 
 const Login = () => {
 
-  const [id,setId]= useState("")
-  const [password,setPassword]=useState("")
+  const navigate = useNavigate()
 
-  console.log(id);
-  const loginSubmit = (e) =>{
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  // useEffect(()=>{
+  //   sessionStorage.clear()
+  //   },[]);
+
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if(validate){
-      console.log(validate)
-    }
-    
-  } 
 
-  const validate =(e)=>{
-    let result =true;
-    if(id===null || id===''){
-      result=false;
+    if (validate()) {
+      // console.log('proceed')
+      fetch("http://localhost:4000/adminuser/"+username,).then((res)=>{
+        return res.json();
+      }).then((response)=>{
+        console.log(response)
+          if(Object.keys(response).length ===0){
+            toast.error("Please Enter Valid User Name")
+          } else{
+            if(response.password === password){
+              toast.success("Login Successfull ..")
+              sessionStorage.setItem('username',username)
+              navigate('/layout')
+            }else{
+            toast.error ("Please Enter Valid Password")
+          }
+}
+
+      }).catch((error)=>{
+          toast.error("Incorrect User Name OR Password " +error.message)
+      });
+    }
+
+  }
+
+  const validate = () => {
+    let result = true;
+    if (username ===null || username === '') {
+      result = false;
       toast.warning("Enter Valid User Name");
     }
-    if(password=== null || password ===''){
-      result=false;
+    if (password ===null || password === '') {
+      result = false;
       toast.warning("Enter Correct Password")
     }
     return result;
   }
 
+
+
   return (
 
-    <div  >
-      <Container>
-      
-      <div  className="text-center ">
-      <h1 style={{marginTop:"100px",opacity:"0.9"}}><b>Aaniya</b> </h1>  
-      <Card className="text-center"  style={{marginLeft:"300px",width:"500px"}}>
-        <Form > 
-      <Card.Body>
-        <Card.Title><h3>- Login -</h3></Card.Title>
-        <div class="input-group mb-3">
-          <FormControl type="text" class="form-control" placeholder="Email" value={id} onChange={e=>setId(e.target.value)} />
-        </div>
-        <div class="input-group mb-3">
-          <FormControl type="password" class="form-control" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)}   />
-        </div>
-        <Button variant="primary" onClick={loginSubmit}>Login</Button>
+    <div className='row'>
+      <div className='offset-lg-3 col-lg-6' style={{paddingTop:"100px"}}>
+        <form className='container' onSubmit={handleSubmit} >
+                <h1 className='text-center'>Aaniya</h1>
+          <div className='card' >
+            <div className='card-header text-center '>
+              <h1>- Login -</h1>
+            </div>
+            <div className='card-body'>
+              <div className='form-group'>
+                <label>User Name <span className='errmsg'>*</span></label>
+                <input type="text" className='form-control' value={username} onChange={e => setUsername(e.target.value)} />
+              </div>
+              <div className='form-group'>
+                <label>Password <span className='errmsg'>*</span></label>
+                <input type="password" className='form-control' value={password} onChange={e => setPassword(e.target.value)} />
+              </div>
+            </div>
+            <div className='card-footer text-center '>
+              <button type='submit' className='btn btn-primary ' >Login</button>
+             
+            </div>
 
-        <p style={{paddingTop:"10px"}}>-OR-</p>
-
-        <p class="mb-1" style={{color:"blue"}}>
-         Forgot Password 
-      </p>
-
-        <p class="mb-1" style={{color:"blue"}}>
-        <Link to="/register" style={{textDecoration:"none"}}> Register </Link>
-      </p>
-      </Card.Body>
-      </Form>
-    </Card>
-    </div>
-      </Container>
+          </div>
+          <div className='text-center'>
+          
+              <br />
+              <p style={{ paddingTop: "10px" }}>-OR-</p>
+              <p className="mb-1" style={{ color: "blue" }}>
+                Forgot Password
+              </p>
+              <p className="mb-1" style={{ color: "blue" }}>
+                <Link to="/register" style={{ textDecoration: "none" }}> Register </Link>
+              </p>
+              </div>
+        </form>
       </div>
+
+    </div>
   )
 }
 
