@@ -12,11 +12,14 @@ const Tshirt = () => {
       <thead>
         <tr>
           <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Offer</th>
+          <th>Discription</th>
+          <th>Image</th>
           <th>Action</th>
         </tr>
+      
       </thead>
       <tbody>
         <tr>
@@ -24,14 +27,10 @@ const Tshirt = () => {
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+          <td><button className='btn btn-outline-warning ' >Edit</button> <button className='btn btn-outline-danger ' style={{marginLeft:"5px"}}>Delete</button> </td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        
       </tbody>
     </Table>
     </>

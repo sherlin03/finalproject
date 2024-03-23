@@ -63,5 +63,16 @@
       "gender": "Male",
       "password": "12345"
     }
+  ],
+  "tshirts":[
+    {
+      "id":"1",
+      "productname":"tshirts",
+      "price":"200",
+      "offer":"10",
+      "discription":"test",
+      "image":"test"
+      
+    }
   ]
 }
