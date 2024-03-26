@@ -10,6 +10,8 @@ import Jean from './Pages/admin/Dashboard/adminpages/Jean';
 import Shoes from './Pages/admin/Dashboard/adminpages/Shoes';
 import Suits from './Pages/admin/Dashboard/adminpages/Suits';
 import Tshirt from './Pages/admin/Dashboard/adminpages/Tshirt';
+import Addtshirt from './Pages/admin/Dashboard/adminpages/Addtshirt';
+import Addjean from './Pages/admin/Dashboard/adminpages/Addjean';
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
                 <Route exact path='/shoes' element={<Shoes/>}></Route>
                 <Route exact path='/suits' element={<Suits/>}></Route>
                 <Route exact path='/tshirts' element={<Tshirt/>}></Route>
+                <Route exact path='/addtshirt' element={<Addtshirt/>}></Route>
+                <Route exact path='/addjean' element={<Addjean/>}></Route>
 
              </Route>
 

@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { Link } from 'react-router-dom';
 
 const Tshirt = () => {
   return (
     <>
     <div className="justify-content-between " style={{display:"flex"}}>
       <h2 >T-Shirt List</h2>
-      <button className='btn btn-success  float-lg-end'  >Add [+]</button>
+      <Link to='/addtshirt' className='btn btn-success text-center float-lg-end'  style={{textDecoration:"none",paddingTop:"10px"}}> Add [+] </Link>
     </div>
     <Table striped bordered hover size="sm" style={{marginTop:"50px",fontSize:"18px"}}>
       <thead>
