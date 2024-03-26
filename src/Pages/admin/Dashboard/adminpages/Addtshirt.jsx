@@ -1,24 +1,55 @@
-import axios from 'axios'
 import React, { useState } from 'react'
 import { Button, Card, Container, Form } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+
 
 const Addtshirt = () => {
-        const navigate=useNavigate()
-        const [productname,setProductname] = useState("");
-        const [price,setPrice]=useState("");
-        const [offer,setOffer]=useState("");
-        const [discription,setDiscription] =useState("");
-        const [image, setImage] = useState(null);
+       
+        const [formData,setFormData]=useState({
+          productname:'',
+          price :'',
+          offer:'',
+          discription:'',
+          image:null
+        })
+      const handleInputChange=(e)=>{
+        setFormData({
+          ...formData ,
+          [e.target.name] : e.target.value,
+        })
+      }
+      const handleImageChange=(e)=>{
+        setFormData({
+          ...formData,
+          image: e.target.files[0]
+        })
+      }
 
-        const handleSubmit = async (e) => {
-          e.preventDefault();
+      const convertImageToBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = (error) => reject(error);
+        });
+      };
 
-          
+      const handleSubmit=async(e)=>{
+        e.preventDefault()
 
+        const base64Image= await convertImageToBase64(formData.image)
 
+        const userData = {
+          productname: formData.productname,
+          price: formData.price,
+          password: formData.password,
+          image: base64Image,
+        };
+    
 
-        }
+        
+      }
+
+      
 
   return (
     <>
@@ -35,7 +66,10 @@ const Addtshirt = () => {
                     <Form.Control 
                       type="text" 
                       placeholder="Enter Name"
-                      onChange={(e)=>setProductname(e.target.value)} 
+                      name="productname"
+                      id="productname"
+                      value={formData.productname} 
+                      onChange={handleInputChange} 
                     />
                   </Form.Group>
 
@@ -44,7 +78,10 @@ const Addtshirt = () => {
                     <Form.Control 
                       type="text" 
                       placeholder="Enter Price" 
-                      onChange={(e)=>setPrice(e.target.value)}
+                      name="price"
+                      id="price"
+                      value={formData.price}
+                      onChange={handleInputChange}
                     />
                   </Form.Group>
 
@@ -53,7 +90,10 @@ const Addtshirt = () => {
                     <Form.Control 
                       type="text" 
                       placeholder="Enter Offer"
-                      onChange={(e)=>setOffer(e.target.value)}
+                      name="offer"
+                      id="offer"
+                      value={formData.offer}
+                      onChange={handleInputChange}
                     />
                   </Form.Group>
 
@@ -61,8 +101,11 @@ const Addtshirt = () => {
                     <Form.Label style={{fontWeight:"bold"}}>Discription</Form.Label>
                     <Form.Control 
                       type="tel" 
-                      placeholder="Enter Discription" 
-                      onChange={(e)=>setDiscription(e.target.value)}
+                      placeholder="Enter Discription"
+                      name="discription" 
+                      id="discription" 
+                      value={formData.discription} 
+                      onChange={handleInputChange}
                     />
                   </Form.Group>
 
@@ -71,13 +114,16 @@ const Addtshirt = () => {
                     <Form.Control 
                       type="file" 
                       accept="image/*" 
-                      onChange={(e) => setImage(e.target.files[0])} 
+                      name='image'
+                      id='image'
+                      onChange={handleImageChange} 
                     />
                   </Form.Group>
 
                   <Button style={{marginLeft:"210px"}} variant="primary" onClick={handleSubmit}>
                     Submit
                   </Button>
+
                 </Form>
               </Card.Body>
             </Card>
