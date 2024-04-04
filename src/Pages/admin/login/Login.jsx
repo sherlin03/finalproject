@@ -30,7 +30,7 @@ const Login = () => {
             if(response.password === password){
               toast.success("Login Successfull ..")
               sessionStorage.setItem('username',username)
-              navigate('/layout')
+              navigate('/userhome')
             }else{
             toast.error ("Please Enter Valid Password")
           }

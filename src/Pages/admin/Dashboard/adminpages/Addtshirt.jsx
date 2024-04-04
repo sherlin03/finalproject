@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Button, Card, Container, Form } from 'react-bootstrap'
-
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Addtshirt = () => {
        
+
+        const navigate=useNavigate()
         const [formData,setFormData]=useState({
           productname:'',
           price :'',
@@ -41,19 +44,44 @@ const Addtshirt = () => {
         const userData = {
           productname: formData.productname,
           price: formData.price,
-          password: formData.password,
+          offer: formData.offer,
+          discription: formData.discription,
           image: base64Image,
         };
     
-
-        
-      }
-
-      
+        try {
+          const response = await fetch('http://localhost:4000/tshirts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+          });
+    
+          if (response.ok) {
+            console.log('T-Shirt Added successfully!');
+            toast.success("T-Shirt Added successfully!");
+            navigate('tshirts')
+            // Reset form fields
+            setFormData({
+              productname: '',
+              price: '',
+              offer: '',
+              discription: '',
+              image: null,
+            });
+          } else {
+            toast.danger("Plese Enter Valid Details");
+            console.error('Failed to T-Shirts.');
+          }
+        } catch (error) {
+          console.error('Error registering T-Shirts:', error);
+        }
+      };
 
   return (
-    <>
-      <div className=''>
+    
+      <div >
         <Container >
           <div style={{ paddingTop: "50px"}}>
 
@@ -131,8 +159,8 @@ const Addtshirt = () => {
         </Container>
       </div>  
         
-    </>
-  )
-}
+ 
+  );
+  }
 
 export default Addtshirt

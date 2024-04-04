@@ -3,7 +3,7 @@ import { Button, Card, Container, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const Addjean = () => {
+const Addsuit = () => {
        
 
         const navigate=useNavigate()
@@ -50,7 +50,7 @@ const Addjean = () => {
         };
     
         try {
-          const response = await fetch('http://localhost:4000/jeans', {
+          const response = await fetch('http://localhost:4000/suits', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -59,9 +59,9 @@ const Addjean = () => {
           });
     
           if (response.ok) {
-            console.log('Jeans Added successfully!');
-            toast.success("Jeans Added successfully!");
-            navigate('/jean')
+            console.log('Suits Added successfully!');
+            toast.success("Suits Added successfully!");
+            navigate('/suits')
             // Reset form fields
             setFormData({
               productname: '',
@@ -72,19 +72,12 @@ const Addjean = () => {
             });
           } else {
             toast.danger("Plese Enter Valid Details");
-            console.error('Failed to Jeans.');
+            console.error('Failed to Suits.');
           }
         } catch (error) {
-          console.error('Error registering user:', error);
+          console.error('Error registering Suits:', error);
         }
       };
-
-        
-    
-  
-    
-
-      
 
   return (
     
@@ -94,7 +87,7 @@ const Addjean = () => {
 
             <Card style={{ width: '40rem', margin: '0 auto' }}>
               <Card.Body>
-                <Card.Title className="text-center"><h2>Add Jean</h2></Card.Title>
+                <Card.Title className="text-center"><h2>Add Suit</h2></Card.Title>
                 <Form>
                   <Form.Group className="mb-3 text-left" >
                     <Form.Label style={{fontWeight:"bold"}}>Product Name</Form.Label>
@@ -170,4 +163,4 @@ const Addjean = () => {
   );
   }
 
-export default Addjean
+export default Addsuit

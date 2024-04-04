@@ -21,6 +21,7 @@ const Menu = () => {
             <li><Link to='/jean' style={{textDecoration:"none",color:"white"}}>Jean</Link></li>
             <li><Link to='/suits' style={{textDecoration:"none",color:"white"}}>Men's Suits</Link></li>
             <li><Link to='/shoes' style={{textDecoration:"none",color:"white"}}>Men's Shoes</Link></li>
+            <li><Link to='/card' style={{textDecoration:"none",color:"white"}}>card</Link></li>
           </ul>
         </li>
         <li>Analytics</li>
