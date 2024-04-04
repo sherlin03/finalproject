@@ -29,7 +29,7 @@ const UserNav = () => {
 
   return (
     <>
-    <Navbar expand="lg" className="bg-info">
+    <Navbar expand="lg" className="bg-info" position='sticky'>
       <Container fluid>
         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
