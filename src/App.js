@@ -13,12 +13,15 @@ import Suits from './Pages/admin/Dashboard/adminpages/Suits';
 import Tshirt from './Pages/admin/Dashboard/adminpages/Tshirt';
 import AdminRegistration from './Pages/admin/login/AdminRegistration';
 import Login from './Pages/admin/login/Login';
-import UserHome from './Pages/user/UserHome';
 import Addsuit from './Pages/admin/Dashboard/adminpages/Addsuit';
 import Card from './Pages/admin/Dashboard/Card';
 import Adminlogin from './Pages/admin/login/Adminlogin';
 import UserLayout1 from './Pages/user/UserLayout1';
 import UserLayout2 from './Pages/user/UserLayout2';
+import Userjeans from './Pages/user/Userjeans';
+import Usertshirt from './Pages/user/Usertshirt';
+import Usershoes from './Pages/user/Usershoes';
+import Usersuits from './Pages/user/Usersuit.Jsx';
 
 
 function App() {
@@ -39,8 +42,10 @@ function App() {
              <Route exact path='/userhome' element={<UserLayout1/>}></Route>
              
              <Route element={<UserLayout2/>}>
-              
-
+             <Route  path='/userjean' element={<Userjeans/>}></Route>
+             <Route  path='/usertshirt' element={<Usertshirt/>}></Route>
+             <Route  path='/usershoe' element={<Usershoes/>}></Route>
+             <Route  path='/usersuit' element={<Usersuits/>}></Route>
              </Route>
 
              {/* admin  */}

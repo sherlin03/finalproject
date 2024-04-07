@@ -17,6 +17,18 @@
     width: calc(16.666% - 10px); 
     box-sizing: border-box;
   }
+
+  .slidepic{
+    width:100%
+  }
+  .slidetext{
+    margin-bottom: 250px;
+    color:white;
+  }
+  .linktext{
+    text-decoration:none;
+    color:black;
+  }
   
   @media (max-width: 768px) {
     .card {
