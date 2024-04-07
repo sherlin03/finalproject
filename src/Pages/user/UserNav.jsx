@@ -31,7 +31,7 @@ const UserNav = () => {
     <>
     <Navbar expand="lg" className="bg-info" position='sticky'>
       <Container fluid>
-        <Navbar.Brand onClick={navigate('/userhome')}>Aaniya Fashions</Navbar.Brand>
+        <Navbar.Brand onClick={()=>navigate('/userhome')}>Aaniya Fashions</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="d-flex">
           <Nav

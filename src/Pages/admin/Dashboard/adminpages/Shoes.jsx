@@ -50,6 +50,11 @@ const Shoes = () => {
       <h2 >Shoe List</h2>
       <Link to='/addshoe' className='btn btn-success text-center float-lg-end'  style={{textDecoration:"none",paddingTop:"10px"}}> Add [+] </Link>
     </div>
+
+    {(shoes.length)?(
+
+
+
     <Table striped bordered hover size="sm" style={{marginTop:"50px",fontSize:"18px"}}>
       <thead>
         <tr>
@@ -80,7 +85,10 @@ const Shoes = () => {
         ))}
       </tbody>
     </Table>
-
+ ):(
+  <h5 style={{marginLeft:"300px",marginTop:"150px"}}>No Items Available</h5>
+)
+  }
 
 
     </>

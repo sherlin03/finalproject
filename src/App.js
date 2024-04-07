@@ -21,7 +21,7 @@ import UserLayout2 from './Pages/user/UserLayout2';
 import Userjeans from './Pages/user/Userjeans';
 import Usertshirt from './Pages/user/Usertshirt';
 import Usershoes from './Pages/user/Usershoes';
-import Usersuits from './Pages/user/Usersuit.Jsx';
+import Adultsuits from './Pages/user/Adultsuits';
 
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
              <Route  path='/userjean' element={<Userjeans/>}></Route>
              <Route  path='/usertshirt' element={<Usertshirt/>}></Route>
              <Route  path='/usershoe' element={<Usershoes/>}></Route>
-             <Route  path='/usersuit' element={<Usersuits/>}></Route>
+             <Route  path='/usersuit' element={<Adultsuits/>}></Route>
              </Route>
 
              {/* admin  */}
