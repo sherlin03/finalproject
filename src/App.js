@@ -22,6 +22,7 @@ import Userjeans from './Pages/user/Userjeans';
 import Usertshirt from './Pages/user/Usertshirt';
 import Usershoes from './Pages/user/Usershoes';
 import Adultsuits from './Pages/user/Adultsuits';
+import Notfound from './Pages/Notfound';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
               {/* user  */}
              {/* <Route exact path='/userhome' element={<UserHome/>}></Route> */}
              <Route exact path='/userhome' element={<UserLayout1/>}></Route>
+             <Route exact path='*' element={<Notfound/>}></Route>
              
              <Route element={<UserLayout2/>}>
              <Route  path='/userjean' element={<Userjeans/>}></Route>

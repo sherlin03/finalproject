@@ -35,3 +35,8 @@
       width: calc(33.333% - 10px); 
     }
   }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }

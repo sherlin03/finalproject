@@ -20,8 +20,8 @@ const UserContent1 = () => {
           <img src={require('../../Img/41.jpg')} height={500} alt="" className='slidepic' />
           <Carousel.Caption>
             <div className='slidetext'>
-              <h3>Best Ice Cream Shop</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Best Fashions Shop</h3>
+              <p>One of Best Shop In Nagercoil .</p>
               <Button variant="outline-light" onClick={()=>navigate('/about')} >Read More ..</Button>
             </div>
 
@@ -32,7 +32,7 @@ const UserContent1 = () => {
           <Carousel.Caption>
             <div className='slidetext'>
               <h3>Visit Our Shop</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p> Near Nagercoil.</p>
               <Button variant="outline-light" onClick={()=>navigate('/contact')}>Read More ..</Button>
             </div>
           </Carousel.Caption>
@@ -41,9 +41,9 @@ const UserContent1 = () => {
           <img src={require('../../Img/41.jpg')} className='slidepic' height={500} alt="" />
           <Carousel.Caption>
             <div className='slidetext'>
-              <h3>Delicious Ice Creams</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              <Button variant="outline-light" onClick={()=>navigate('/combopack')}>Read More ..</Button>
+              <h3>Best Suits</h3>
+              <p>All type Suits Avilable.</p>
+              <Button variant="outline-light" onClick={()=>navigate('/usersuit')}>Read More ..</Button>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -56,6 +56,7 @@ const UserContent1 = () => {
 
     <div >
       <Container>
+        <div>
       <Row style={{marginTop:"50px"}}>
         <Col sm={6}>
           <h4>Welcome to Our Store!</h4>
@@ -73,6 +74,66 @@ const UserContent1 = () => {
           <img src={require('../../Img/istockphoto-473046068-612x612.jpg')} style={{width:"600px",borderRadius:"10px"}} />
         </Col>
       </Row>
+      <Button variant="outline-light" onClick={()=>navigate('/about')}>Read More ..</Button>
+      </div>
+
+    <div>
+      <Row>
+        <Col sm={3}>
+          <div className='card' style={{width:"270px"}}>
+              <img src={require('../../Img/10-phantom-new-limits-blue-original-imagk9y5zwra4zjy.webp')}  width={250} height={200} ></img>
+            <div className='card-body text-center'>
+            <hr/>
+              <h5> Shoe </h5>
+              <h5>Price : ₹ 1000</h5>
+              <h5>Offer : 10 %</h5>
+              <Button variant="outline-info" onClick={()=>navigate('/usershoe')}>Read More ..</Button>
+            </div>
+          </div>
+        </Col>
+
+        <Col sm={3}>
+          <div className='card' style={{width:"270px"}}>
+              <img src={require('../../Img/jean.jpg')}  width={250} height={200} ></img>
+            <div className='card-body text-center'>
+            <hr/>
+              <h5> Jeans </h5>
+              <h5>Price : ₹ 1100</h5>
+              <h5>Offer : 10 %</h5>
+              <Button variant="outline-info" onClick={()=>navigate('/userjean')}>Read More ..</Button>
+            </div>
+          </div>
+        </Col>
+
+        <Col sm={3}>
+          <div className='card' style={{width:"270px"}}>
+              <img src={require('../../Img/suit.jpg')} width={250} height={200}  ></img>
+            <div className='card-body text-center'>
+            <hr/>
+              <h5> Suits </h5>
+              <h5>Price : ₹ 2000</h5>
+              <h5>Offer : 10 %</h5>
+              <Button variant="outline-info" onClick={()=>navigate('/usersuit')}>Read More ..</Button>
+            </div>
+          </div>
+        </Col>
+
+        <Col sm={3}>
+          <div className='card' style={{width:"270px"}}>
+              <img src={require('../../Img/tshirts.webp')}  width={250} height={200} ></img>
+            <div className='card-body text-center'>
+            <hr/>
+              <h5> T-Shirts </h5>
+              <h5>Price : ₹ 1500</h5>
+              <h5>Offer : 10 %</h5>
+              <Button variant="outline-info" onClick={()=>navigate('/usertshirt')}>Read More ..</Button>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </div>
+
+
       </Container>
     </div>
 
