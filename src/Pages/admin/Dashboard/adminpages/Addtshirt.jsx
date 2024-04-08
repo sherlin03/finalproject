@@ -61,7 +61,7 @@ const Addtshirt = () => {
           if (response.ok) {
             console.log('T-Shirt Added successfully!');
             toast.success("T-Shirt Added successfully!");
-            navigate('tshirts')
+            navigate('/tshirts')
             // Reset form fields
             setFormData({
               productname: '',

@@ -43,7 +43,7 @@ const Usershoes = () => {
                 <div class="card-body ">
                 <h5 className="card-title text-center ">{shoe.productname}</h5>
                 <h5 className="card-title text-center">₹ {shoe.price}</h5>
-                <h5 className="card-title text-center">{shoe.offer} %</h5>
+                <h5 className="card-title text-center">Offer : {shoe.offer} %</h5>
               </div>
               </div>
             ))}

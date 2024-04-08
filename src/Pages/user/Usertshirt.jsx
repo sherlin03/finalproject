@@ -40,7 +40,7 @@ const Usertshirt = () => {
                 <div class="card-body ">
                 <h5 className="card-title text-center ">{tshirt.productname}</h5>
                 <h5 className="card-title text-center">₹ {tshirt.price}</h5>
-                <h5 className="card-title text-center">{tshirt.offer} %</h5>
+                <h5 className="card-title text-center">Offer : {tshirt.offer} %</h5>
               </div>
               </div>
             ))}

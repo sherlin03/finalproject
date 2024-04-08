@@ -63,7 +63,7 @@ const Login = () => {
     <div className='row'>
       <div className='offset-lg-3 col-lg-6' style={{paddingTop:"100px"}}>
         <form className='container' onSubmit={handleSubmit} >
-                <h1 className='text-center'>Aaniya</h1>
+                <h1 className='text-center'>Aaniya Fashions</h1>
           <div className='card' >
             <div className='card-header text-center '>
               <h1>- Login -</h1>

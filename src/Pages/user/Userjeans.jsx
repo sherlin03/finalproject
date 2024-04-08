@@ -41,7 +41,7 @@ const Userjeans = () => {
                 <div class="card-body ">
                 <h5 className="card-title text-center ">{jean.productname}</h5>
                 <h5 className="card-title text-center">₹ {jean.price}</h5>
-                <h5 className="card-title text-center">{jean.offer} %</h5>
+                <h5 className="card-title text-center">Offer : {jean.offer} %</h5>
               </div>
               </div>
             ))}

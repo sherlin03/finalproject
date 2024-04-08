@@ -39,7 +39,7 @@ const Adultsuits = () => {
                 <div class="card-body ">
                 <h5 className="card-title text-center ">{suit.productname}</h5>
                 <h5 className="card-title text-center">₹ {suit.price}</h5>
-                <h5 className="card-title text-center">{suit.offer} %</h5>
+                <h5 className="card-title text-center">Offer : {suit.offer} %</h5>
               </div>
               </div>
             ))}
