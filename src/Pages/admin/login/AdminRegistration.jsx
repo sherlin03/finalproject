@@ -50,13 +50,8 @@ const AdminRegistration = () => {
         return isproceed;
     }
 
-   
-
-
     const handleSubmit = (e) => {
-       
         e.preventDefault();
-
         let regobj={id,email,mobile,address,country,gender,password};
          console.log(regobj)
 
