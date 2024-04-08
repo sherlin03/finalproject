@@ -71,17 +71,24 @@ const UserContent1 = () => {
 
 
         <Col sm={6}>
-          <img src={require('../../Img/istockphoto-473046068-612x612.jpg')} style={{width:"600px",borderRadius:"10px"}} />
+          <img src={require('../../Img/istockphoto-473046068-612x612.jpg')} alt="test" style={{width:"600px",borderRadius:"10px"}} />
         </Col>
       </Row>
       <Button variant="outline-light" onClick={()=>navigate('/about')}>Read More ..</Button>
       </div>
 
-    <div>
-      <Row>
+      <div className='text-center' style={{marginTop:"20px"}}>
+      <h1 style={{textDecoration:"underline"}} id='product' >Product</h1>
+    </div>
+
+    <div style={{marginTop:"20px"}}>
+
+    
+
+      <Row >
         <Col sm={3}>
           <div className='card' style={{width:"270px"}}>
-              <img src={require('../../Img/10-phantom-new-limits-blue-original-imagk9y5zwra4zjy.webp')}  width={250} height={200} ></img>
+              <img src={require('../../Img/10-phantom-new-limits-blue-original-imagk9y5zwra4zjy.webp')} alt="test"  width={250} height={200} ></img>
             <div className='card-body text-center'>
             <hr/>
               <h5> Shoe </h5>
@@ -94,7 +101,7 @@ const UserContent1 = () => {
 
         <Col sm={3}>
           <div className='card' style={{width:"270px"}}>
-              <img src={require('../../Img/jean.jpg')}  width={250} height={200} ></img>
+              <img src={require('../../Img/jean.jpg')} alt="test"  width={250} height={200} ></img>
             <div className='card-body text-center'>
             <hr/>
               <h5> Jeans </h5>
@@ -107,7 +114,7 @@ const UserContent1 = () => {
 
         <Col sm={3}>
           <div className='card' style={{width:"270px"}}>
-              <img src={require('../../Img/suit.jpg')} width={250} height={200}  ></img>
+              <img src={require('../../Img/suit.jpg')} alt="test" width={250} height={200}  ></img>
             <div className='card-body text-center'>
             <hr/>
               <h5> Suits </h5>
@@ -120,7 +127,7 @@ const UserContent1 = () => {
 
         <Col sm={3}>
           <div className='card' style={{width:"270px"}}>
-              <img src={require('../../Img/tshirts.webp')}  width={250} height={200} ></img>
+              <img src={require('../../Img/tshirts.webp')} alt="test"  width={250} height={200} ></img>
             <div className='card-body text-center'>
             <hr/>
               <h5> T-Shirts </h5>

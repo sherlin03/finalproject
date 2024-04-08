@@ -23,6 +23,8 @@ import Usertshirt from './Pages/user/Usertshirt';
 import Usershoes from './Pages/user/Usershoes';
 import Adultsuits from './Pages/user/Adultsuits';
 import Notfound from './Pages/Notfound';
+import About from './Pages/user/About';
+import Contact from './Pages/user/Contact';
 
 
 function App() {
@@ -48,6 +50,8 @@ function App() {
              <Route  path='/usertshirt' element={<Usertshirt/>}></Route>
              <Route  path='/usershoe' element={<Usershoes/>}></Route>
              <Route  path='/usersuit' element={<Adultsuits/>}></Route>
+             <Route  path='/about' element={<About/>}></Route>
+             <Route  path='/contact' element={<Contact/>}></Route>
              </Route>
 
              {/* admin  */}

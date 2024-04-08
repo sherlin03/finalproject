@@ -10,9 +10,9 @@ const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
-  // useEffect(()=>{
-  //   sessionStorage.clear()
-  //   },[]);
+  useEffect(()=>{
+    sessionStorage.clear()
+    },[]);
 
 
   const handleSubmit = (e) => {
