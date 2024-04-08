@@ -27,8 +27,7 @@ const Navbar = () => {
         <AppBar position='sticky'>
             <Toolbar className="justify-content-between ">
                 <Box>
-                    <img src={require('../../../Img/aaniya.png')} alt="" height={30} /> 
-                    <Typography variant='danger' >Aaniya</Typography>
+                    <Typography variant='danger' >Aaniya Fashions</Typography>
                 </Box>
                 <Box>
                     <Typography variant='danger' style={{textDecoration:"none" ,color:"white"}}>  </Typography>

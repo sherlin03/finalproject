@@ -45,11 +45,11 @@ const UserNav = () => {
             <Nav.Link ><Link to='/usertshirt' style={{textDecoration:"none",color:"black"}} >T-Shirt</Link></Nav.Link>
             <Nav.Link ><Link to='/usersuit' style={{textDecoration:"none",color:"black"}} >Suits</Link></Nav.Link>
             <Nav.Link ><Link to='/usershoe' style={{textDecoration:"none",color:"black"}} >Shoe</Link></Nav.Link>
-            <Nav.Link ><Link to='/usershoe' style={{textDecoration:"none",color:"black"}} >Contact</Link></Nav.Link>
+            <Nav.Link ><Link to='/contact' style={{textDecoration:"none",color:"black"}} >Contact</Link></Nav.Link>
             
 
             <NavDropdown title="Account" id="navbarScrollingDropdown" sx={{paddingRight:"20px"}}>
-              <NavDropdown.Item >Profile</NavDropdown.Item>
+              
               <NavDropdown.Item  onClick={handleLogout}>
                 Logout
               </NavDropdown.Item>

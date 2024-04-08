@@ -74,9 +74,9 @@ const UserContent1 = () => {
           <img src={require('../../Img/istockphoto-473046068-612x612.jpg')} alt="test" style={{width:"600px",borderRadius:"10px"}} />
         </Col>
       </Row>
-      <Button variant="outline-light" onClick={()=>navigate('/about')}>Read More ..</Button>
+     
       </div>
-
+      <Button variant="outline-dark text-center" onClick={()=>navigate('/about')} style={{marginLeft:"500px"}}>Read More ..</Button>
       <div className='text-center' style={{marginTop:"20px"}}>
       <h1 style={{textDecoration:"underline"}} id='product' >Product</h1>
     </div>
