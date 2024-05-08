@@ -35,7 +35,7 @@ const About = () => {
           <Col sm={6}>
             
             <img src={require('../../Img/fashion-store-female-shop-outlet-sale-boutique-women-shopping-person-buy-dress-tshirt-shoes-vector-illustration_53562-15507.jpg')} alt="" style={{borderRadius:"10px"}}/>
-            <img src={require('../../Img/client-suit-boutique-with-shopping-bags_7502-4397.jpg')} alt="" style={{borderRadius:"10px",marginTop:"20px"}}/>
+            <img src={require('../../Img/client-suit-boutique-with-shopping-bags_7502-4397.jpg')} alt="" style={{borderRadius:"10px",marginTop:"20px"}} loading="lazy" />
           </Col>
         </Row>
         </Container>

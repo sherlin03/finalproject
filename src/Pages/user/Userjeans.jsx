@@ -37,7 +37,7 @@ const Userjeans = () => {
           <div className="horizontal-cardss" key={rowIndex}>
             {jeans.slice(rowIndex * 4, rowIndex * 4 + 4).map((jean) => (
               <div key={jeans.id} className="cards" style={{width:"270px"}}>
-                <img src={jean.image} style={{width:"250px",height:"200px"}} />
+                <img src={jean.image} style={{width:"250px",height:"200px"}} loading="lazy" />
                 <div class="card-body ">
                 <h5 className="card-title text-center ">{jean.productname}</h5>
                 <h5 className="card-title text-center">₹ {jean.price}</h5>

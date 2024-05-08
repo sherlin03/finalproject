@@ -71,7 +71,7 @@ const UserContent1 = () => {
 
 
         <Col sm={6}>
-          <img src={require('../../Img/istockphoto-473046068-612x612.jpg')} alt="test" style={{width:"600px",borderRadius:"10px"}} />
+          <img src={require('../../Img/istockphoto-473046068-612x612.jpg')} alt="test"  style={{width:"600px",borderRadius:"10px"}} loading="lazy" />
         </Col>
       </Row>
      

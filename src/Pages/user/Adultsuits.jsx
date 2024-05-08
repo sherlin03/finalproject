@@ -35,7 +35,7 @@ const Adultsuits = () => {
           <div className="horizontal-cardss" key={rowIndex}>
             {suits.slice(rowIndex * 4, rowIndex * 4 + 4).map((suit) => (
               <div key={suits.id} className="cards" style={{width:"270px"}}>
-                <img src={suit.image} style={{width:"250px",height:"200px"}} />
+                <img src={suit.image} style={{width:"250px",height:"200px"}}  />
                 <div class="card-body ">
                 <h5 className="card-title text-center ">{suit.productname}</h5>
                 <h5 className="card-title text-center">₹ {suit.price}</h5>
