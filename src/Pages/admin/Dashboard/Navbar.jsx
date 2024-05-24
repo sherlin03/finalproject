@@ -6,11 +6,10 @@ import { toast } from 'react-toastify';
 const Navbar = () => {
 
     const navigate = useNavigate();
-    // let username = sessionStorage.getItem('username')
     useEffect(()=>{
-        let username = sessionStorage.getItem('username')
-        // console.log(username)
-        if(username==='' || username===null){
+        let email = sessionStorage.getItem('email')
+        console.log(email)
+        if(email==='' || email===null){
             navigate('/')
         }
     },[])
@@ -31,7 +30,6 @@ const Navbar = () => {
                 </Box>
                 <Box>
                     <Typography variant='danger' style={{textDecoration:"none" ,color:"white"}}>  </Typography>
-                    {/* <Typography variant='danger'><Link to="/" style={{textDecoration:"none" ,color:"white"}} > Logout </Link></Typography> */}
                     <Typography variant='danger' onClick={handleLogout}> Logout</Typography>
                 </Box>
             </Toolbar>

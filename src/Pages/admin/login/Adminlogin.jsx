@@ -12,8 +12,8 @@ import { toast } from 'react-toastify';
 const Adminlogin = () => {
 
     const navigate = useNavigate() 
-    const [email,setEmail] =useState('')
-    const [password,setPassword] =useState('')
+    const [email,setEmail] =useState([])
+    const [password,setPassword] =useState([])
     const [loggedin,setloggedin] = useState(false)
 
     const handleSubmit =()=> {
@@ -23,20 +23,14 @@ const Adminlogin = () => {
           toast.success("Login Successfull ..")
           sessionStorage.setItem('email',email)
           setloggedin(true)
-
         }
         else{
             alert("invalid Username or Password");
         }
-
     };
-
-    // useEffect(()=>{
-    //   sessionStorage.clear()
-    //   },[]);
-
-
-
+    useEffect(()=>{
+      sessionStorage.clear()
+      },[]);
 
     if (loggedin) {
         return(

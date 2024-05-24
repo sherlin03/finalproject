@@ -7,19 +7,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import "./user.css";
 import { Link, useNavigate } from 'react-router-dom';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
+
 
 const UserNav = () => {
 
     const navigate =useNavigate()
 
-    // useEffect(()=>{
-    //     let email = sessionStorage.getItem('email')
-    //     // console.log(email)
-    //     if(email==='' || email===null){
-    //         navigate('/')
-    //     }
-    // },[])
+    useEffect(()=>{
+        let username = sessionStorage.getItem('username')
+        // console.log(username)
+        if(username==='' || username===null){
+            navigate('/')
+        }
+    },[])
 
 
     const handleLogout=()=>{
