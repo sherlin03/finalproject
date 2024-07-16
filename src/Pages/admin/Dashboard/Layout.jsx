@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Menu from './Menu'
 import Content from './Content'
-import { Container, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import '../../../App.css'
 
 const Layout = () => {
